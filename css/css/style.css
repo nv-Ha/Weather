@@ -1,0 +1,230 @@
+body{
+    inset: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+}
+
+.background{
+    margin:7vw auto 0 auto;
+    height: 600px;
+    width: 1000px;
+    background: rgb(34,133,163);
+    background: linear-gradient(180deg, rgba(34,133,163,1) 0%, rgba(101,181,198,1) 98%);
+    border-radius: 15px;
+}
+
+.slogan{
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+    display: block;
+    text-align: center;
+}
+
+.nav{
+    height: 40px;
+    background-color: #05455B;
+}
+
+.nav>input{
+    height: 25px;
+    width: 200px;
+    border-radius: 15px;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding-left: 8px;
+    float: right;
+    margin: 0.4vw 2vw 0 0;
+}
+
+.content-list{
+    height: 40%;
+    width: 66%;
+    float: left;
+    margin-top: 0.8vw;
+    margin-left: 0.8vw;
+    background: rgb(34,133,163);
+    background: linear-gradient(180deg, rgba(34,133,163,1) 0%, rgba(101,181,198,1) 98%);
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.content-list i{
+    font-size: 15px;
+}
+
+.city{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 2vw 0 0 2vw;
+}
+
+.cityCoord{
+    font-size: 15px;
+    float: right;
+    margin: 2.5vw 1vw 0 2vw;
+}
+
+.cityCoord span{
+    margin-left: 0.3vw;
+}
+
+.timezone{
+    margin: 1vw 0 0 2vw;
+    display: block;
+    font-size: 12px;
+}
+
+.temperature{
+    margin: 1vw 0 0 2vw;
+    display: block;
+    font-size: 70px;
+    font-weight: 600;
+}
+/* vision */
+.vision{
+    float: right;
+    margin: -4vw 1vw 0 0;
+}
+
+.vision span{
+    margin-left: 0.3vw;
+}
+
+.vision .fa-eye{
+    margin-left: 1vw;
+}
+/* rain */
+.rain{
+    float: right;
+    margin: -2vw 1vw 0 0;
+}
+
+.rain span{
+    margin-left: 0.3vw;
+}
+
+.rain .fa-droplet{
+    margin-left: 1vw;
+}
+
+.More{
+    background-color: #05455B;
+    width: 30%;
+    height: 50%;
+    border-radius: 15px;
+    float: right;
+    margin-top: 0.8vw;
+    margin-right: 0.8vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.World{
+    display: block;
+    background-color: #05455B;
+    width: 30%;
+    height: 20%;
+    border-radius: 15px;
+    overflow: hidden;
+    float: right;
+    margin: 18.8vw -17.25vw 0 0;
+    box-shadow: rgba(167, 167, 187, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.footer{
+    float: left;
+    width: 66%;
+    height: 30%;
+    background-color: white;
+    box-shadow: rgba(167, 167, 187, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 15px;
+    margin-top: 0.8vw;
+    margin-left: 0.8vw;
+}
+
+/* country-more */
+.More{
+    position: relative;
+}
+.country-more{
+    position: relative;
+    margin: -0.45vw 0 0 0.5vw;
+    height: 17%;
+    width: 95%;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    color: black;
+    font-size: 15px;
+    /* background: linear-gradient(180deg, rgba(34,133,163,1) 0%, rgba(101,181,198,1) 98%); */
+}
+
+.country-more-name{
+    position: absolute;
+    /* padding: -2.5vw -0.5vw 0 1vw; */
+    margin-top: .5vw;
+    margin-left: .5vw;
+    font-weight: 600;
+}
+
+.country-more-country{
+    /* position: relative; */
+    padding: 1.7vw 0 0 .5vw;
+    /* font-size: 12px; */
+}
+
+.country-more-weather>.fa-solid{
+    position: absolute;
+    float: right;
+    padding-left: 10.5vw;
+    margin-top: -2.52vw;
+}
+
+.temp{
+    float: right;
+    position: relative;
+    margin-top: -2.6vw;
+    margin-right: 1vw;
+}
+
+/* Footer */
+#map{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.leaflet-control-attribution{
+    display: none;
+}
+
+/* --World */
+.slide-world{
+    display: flex;
+}
+
+.slide-world-list{
+    display: none;
+    transition: opacity 1.5s;
+    opacity: 0;
+}
+
+.slide-world-list.active {
+    display: block;
+    opacity: 1;
+}
+
+.slide-world-list > img{
+    width: 17.3vw;
+    height: 7.5vw;
+    border-radius: 15px;
+}

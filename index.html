@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="/css/css/style.css">
+    <link rel="stylesheet" href="/css/css/fontawesome-free-6.2.1-web/fontawesome-free-6.2.1-web/css/all.css">
+<body>
+    <div class="content">
+        <div class="background">
+            <span class="slogan">Look up the Weather</span>
+            <div class="nav">
+                <input class="search" type="search" placeholder="City...">
+            </div>
+            <div class="content-list">
+                <span class="city">Vinh, VN</span>
+                <div class="cityCoord">
+                    <i class="fa-solid fa-location-dot"></i><span class="cityCoord-lon">18°38'50</span>
+                    <span class="cityCoord-lat">105°49’50</span>
+                </div>
+                <span class="timezone">7200 UTC</span>
+                <span class="temperature">18 <sup>o</sup>C</span>
+
+                <!-- ---Vision -->
+                <div class="vision">
+                    <i class="fa-solid fa-wind"></i><span class="wind">20 ms/s</span>
+                    <i class="fa-solid fa-eye"></i><span class="visibility">10000 (m)</span>
+                </div>
+
+                <!-- --rain -->
+                <div class="rain">
+                    <i class="fa-solid fa-cloud-showers-heavy fa-sun fa-cloud-sun"></i><span class="humidity">18%</span>
+                    <i class="fa-solid fa-droplet"></i><span class="precipitation">moderate rain</span>
+                </div>
+            </div>
+            
+            <!-- --more -->
+                <div class="More">
+                   <div class="country-more">
+                        <div class="country-more-list">
+                            <p class="country-more-name country-more-name-city1"></p>
+                            <p class="country-more-country country-more-country-city1"></p>
+                        </div>
+                        <div class="country-more-weather">
+                            <i class="fa-solid fa-cloud-showers-heavy-city1 fa-cloud-showers-heavy fa-sun fa-cloud-sun"></i><span class="temp temp-city1"></span>
+                        </div>
+                   </div>
+
+                   <div class="country-more">
+                        <div class="country-more-list">
+                            <p class="country-more-name country-more-name-city2"></p>
+                            <p class="country-more-country country-more-country-city2"></p>
+                        </div>
+                        <div class="country-more-weather">
+                            <i class="fa-solid fa-cloud-showers-heavy-city2 fa-cloud-showers-heavy fa-sun fa-cloud-sun"></i><span class="temp temp-city2"></span>
+                        </div>
+                   </div>
+
+                   <div class="country-more">
+                        <div class="country-more-list">
+                            <p class="country-more-name country-more-name-city3"></p>
+                            <p class="country-more-country country-more-country-city3"></p>
+                        </div>
+                        <div class="country-more-weather">
+                            <i class="fa-solid fa-cloud-showers-heavy-city3 fa-cloud-showers-heavy fa-sun fa-cloud-sun"></i><span class="temp temp-city3"></span>
+                        </div>
+                   </div>
+
+                   <div class="country-more">
+                        <div class="country-more-list">
+                            <p class="country-more-name country-more-name-city4"></p>
+                            <p class="country-more-country country-more-country-city4"></p>
+                        </div>
+                        <div class="country-more-weather">
+                            <i class="fa-solid fa-cloud-showers-heavy-city4 fa-cloud-showers-heavy fa-sun fa-cloud-sun"></i><span class="temp temp-city4"></span>
+                        </div>
+                   </div>
+
+                   <div class="country-more">
+                        <div class="country-more-list">
+                            <p class="country-more-name country-more-name-city5"></p>
+                            <p class="country-more-country country-more-country-city5"></p>
+                        </div>
+                        <div class="country-more-weather">
+                            <i class="fa-solid fa-cloud-showers-heavy-city5 fa-cloud-showers-heavy fa-sun fa-cloud-sun"></i><span class="temp temp-city5"></span>
+                        </div>
+                   </div>
+
+                </div>
+            <!-- --world -->
+                <div class="World">
+                    <!-- <span class="time-World">aaa</span> -->
+                    <div class="slide-world">
+                        <div class="slide-world-list slide-world-list-1">
+                            <img src="/css/image/city1.png" alt="">
+                        </div>
+
+                        <div class="slide-world-list slide-world-list-2">
+                            <img src="/css/image/city2.png" alt="">
+                        </div>
+
+                        <div class="slide-world-list slide-world-list-3">
+                            <img src="/css/image/city3.png" alt="">
+                        </div>
+
+                        <div class="slide-world-list slide-world-list-4">
+                            <img src="/css/image/city4.png" alt="">
+                        </div>
+
+                        <div class="slide-world-list slide-world-list-5">
+                            <img src="/css/image/city5.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- --footer -->
+                <div class="footer">
+                    <div id="map"></div>
+                </div>
+        </div>
+    </div>
+</body>
+    <script src="/css/js/app.js"></script>
+</html>
