@@ -131,14 +131,15 @@ body{
 }
 
 .World{
-    display: block;
+    position: relative;
     background-color: #05455B;
     width: 30%;
     height: 20%;
     border-radius: 15px;
     overflow: hidden;
     float: right;
-    margin: 18.8vw -17.25vw 0 0;
+    right: 0;
+    margin: 0.8vw 0.8vw 0 0;
     box-shadow: rgba(167, 167, 187, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -184,10 +185,10 @@ body{
 }
 
 .country-more-weather>.fa-solid{
-    position: absolute;
+    /* position: absolute; */
     float: right;
-    padding-left: 10.5vw;
-    margin-top: -2.52vw;
+    margin-right: 4.5vw;
+    margin-top: -2.5vw;
 }
 
 .temp{
@@ -227,4 +228,59 @@ body{
     width: 17.3vw;
     height: 7.5vw;
     border-radius: 15px;
+    /* filter: grayscale(10%); */
+}
+
+.slide-world-list > p{
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0,1vw;
+    text-shadow: rgb(0, 0, 0) 1px 2px;
+}
+
+.slide-world-name-1{
+    position: absolute;
+    padding: 2.5vw 0 0 1vw;
+}
+.slide-world-temp-1{
+    position: absolute;
+    padding: 4vw 0 0 1vw;
+    float: right;
+}
+
+.slide-world-name-2{
+    position: absolute;
+    padding: 2.5vw 0 0 1vw;
+}
+.slide-world-temp-2{
+    position: absolute;
+    padding: 4vw 0 0 1vw;
+}
+
+.slide-world-name-3{
+    position: absolute;
+    padding: 2.5vw 0 0 1vw;
+}
+.slide-world-temp-3{
+    position: absolute;
+    padding: 4vw 0 0 1vw;
+}
+
+.slide-world-name-4{
+    position: absolute;
+    padding: 2.5vw 0 0 1vw;
+}
+.slide-world-temp-4{
+    position: absolute;
+    padding: 4vw 0 0 1vw;
+}
+
+.slide-world-name-5{
+    position: absolute;
+    padding: 2.5vw 0 0 1vw;
+}
+.slide-world-temp-5{
+    position: absolute;
+    padding: 4vw 0 0 1vw;
 }

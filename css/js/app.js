@@ -1,9 +1,6 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-// let latitude;
-// let longitude;
-
 var search = $('.search')
 var city = $('.city')
 var cityCoordLon = $('.cityCoord-lon')
@@ -48,15 +45,18 @@ var iconCloudCity5 = $('.fa-cloud-showers-heavy-city5');
 var footerMap = $('.footer');
 var weatherMap = $('.weathermap');
 
-// --Time World
-// var timeWorld = $('.time-World')
-
 // --World
-var slide1 = $('.slide-world-list-1')
-var slide2 = $('.slide-world-list-2')
-var slide3 = $('.slide-world-list-3')
-var slide4 = $('.slide-world-list-4')
-var slide5 = $('.slide-world-list-5')
+var slideName1 = $('.slide-world-name-1')
+var slideName2 = $('.slide-world-name-2')
+var slideName3 = $('.slide-world-name-3')
+var slideName4 = $('.slide-world-name-4')
+var slideName5 = $('.slide-world-name-5')
+
+var slideTemp1 = $('.slide-world-temp-1')
+var slideTemp2 = $('.slide-world-temp-2')
+var slideTemp3 = $('.slide-world-temp-3')
+var slideTemp4 = $('.slide-world-temp-4')
+var slideTemp5 = $('.slide-world-temp-5')
 
 async function weatherUI(){
     let searchWeather = search.value.trim()
@@ -242,28 +242,9 @@ search.addEventListener('keypress', async function (e) {
       showLocationOnMap(latitude, longitude);
     }
   });
-
-// Giờ thế giới
-// async function getTimeWorld() {
-//     let searchTime = search.value.trim();
-//     let apiURL = `http://api.timezonedb.com/v2.1/list-time-zone?key=HTYRBDI6GORL&format=json&by=zone&zone=${searchTime}`;
-//     let data = await fetch(apiURL).then(res => res.json());
-//     console.log(data)
-
-//     let timestamp = data.zones[0].timestamp;
-//     let cityTimes = new Date(timestamp * 1000);
-
-//     timeWorld.innerText = `Thời gian tại ${searchTime}: ${cityTimes.toLocaleString()}`;
-// }
-// search.addEventListener('keypress', function(e){
-//     if(e.code === 'Enter'){
-//         let searchTime = search.value.trim();
-//         getTimeWorld(searchTime); 
-//     }
-// })
-
-// ---World
-var slideIndex = 0; // Bắt đầu với slideIndex = 0
+// ---World 
+// SLide
+var slideIndex = 0; 
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -277,17 +258,63 @@ function showDivs(n) {
   if (n < 0) {slideIndex = x.length - 1}
   
   for (i = 0; i < x.length; i++) {
-    x[i].classList.remove("active"); // Loại bỏ class "active" từ tất cả các ảnh
+    x[i].classList.remove("active"); 
   }
-  
-  x[slideIndex].classList.add("active"); // Thêm class "active" vào ảnh hiện tại
+ 
+  x[slideIndex].classList.add("active"); 
 }
-
-// Tự động chuyển slide sau một khoảng thời gian
 function autoSlide() {
   plusDivs(1);
-  setTimeout(autoSlide, 3500); // 2000 milliseconds (2 seconds) per slide
+  setTimeout(autoSlide, 3500); 
 }
-
-// Gọi hàm autoSlide để bắt đầu tự động chuyển động
 autoSlide();
+
+async function slideWorld1(){
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=797378415692ac2cf14324e2acf6600a`
+    let data = await fetch(apiURL).then(res=> res.json());
+    console.log(data);
+
+    slideName1.innerText  = data.name + ' ,' + data.sys.country
+    slideTemp1.innerText = (data.main.temp - 273.15).toFixed(2) + "\xB0C"
+}
+slideWorld1()
+
+async function slideWorld2(){
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=797378415692ac2cf14324e2acf6600a`
+    let data = await fetch(apiURL).then(res=> res.json());
+    console.log(data);
+
+    slideName2.innerText  = data.name + ' ,' + data.sys.country
+    slideTemp2.innerText = (data.main.temp - 273.15).toFixed(2) + "\xB0C"
+}
+slideWorld2()
+
+async function slideWorld3(){
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Beijing&appid=797378415692ac2cf14324e2acf6600a`
+    let data = await fetch(apiURL).then(res=> res.json());
+    console.log(data);
+
+    slideName3.innerText  = data.name + ' ,' + data.sys.country
+    slideTemp3.innerText = (data.main.temp - 273.15).toFixed(2) + "\xB0C"
+}
+slideWorld3()
+
+async function slideWorld4(){
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Berlin&appid=797378415692ac2cf14324e2acf6600a`
+    let data = await fetch(apiURL).then(res=> res.json());
+    console.log(data);
+
+    slideName4.innerText  = data.name + ' ,' + data.sys.country
+    slideTemp4.innerText = (data.main.temp - 273.15).toFixed(2) + "\xB0C"
+}
+slideWorld4()
+
+async function slideWorld5(){
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=797378415692ac2cf14324e2acf6600a`
+    let data = await fetch(apiURL).then(res=> res.json());
+    console.log(data);
+
+    slideName5.innerText  = data.name + ' ,' + data.sys.country
+    slideTemp5.innerText = (data.main.temp - 273.15).toFixed(2) + "\xB0C"
+}
+slideWorld5()
